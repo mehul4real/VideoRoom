@@ -47,12 +47,12 @@
 
 </head>
 
-<body class="bg-light" id="Home">
+<body class="bg-light picture" id="Home">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#Home"><img src="img/logo.png" alt="Vynchronize logo" height="40" width="40"> VideoRoom</a>
+            <a class="form-text navbar-brand js-scroll-trigger" href="#Home"><img src="img/logo.png" alt="Vynchronize logo" height="40" width="40"> <b style="font-size:1.5rem;">VideoRoom</b></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -68,7 +68,7 @@
                         <a id="contact-nav" class="nav-link js-scroll-trigger hide" href="#">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" target="_blank" href="https://github.com/Mehul4real/VideoRoom">Source Code</a>
+                        <a class="form-text nav-link js-scroll-trigger" target="_blank" href="https://github.com/Mehul4real/VideoRoom">Source Code</a>
                     </li>
                 </ul>
             </div>
@@ -76,38 +76,47 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" >
 
         <!-- Loading page -->
         <!-- Loader is currently dependent on the dailymotion api because it is the slowest -->
         <div id="loading"></div>
 
+        <div class=row>
+        <div id="homeImg" class="col-md-3 ">
+            
+        </div>
+
         <!-- User Form (First Page) -->
-        <div id="userFormArea" class="row">
+        <div id="userFormArea" class="col-md-6 box-card">
             <div class="col-md-12">
                 <!-- ADD DESCRIPTION HERE -->
-                <h2>Welcome to VideoRoom</h2>
-                <hr style="height:20pt; visibility:hidden;" />
+                <h1 class="welcome" style="margin-top: 0.5rem;" >Welcome to VideoRoom</h1>
+                <hr style="height:10pt; visibility:hidden;" />
 
-                <h2> Join a Room! </h2>
+                <h2 class="form-text"> Join a Room! </h2>
                 <form id="userForm">
                     <div class="form-group">
-                        <p style="color:red; margin-bottom: 0px" id="missinginfo"></p>
-                        <label>Enter Name</label>
+                        <p style="color:whitesmoke; margin-bottom: 0px" id="missinginfo"></p>
+                        <label style="color:whitesmoke;" >Enter Name</label>
                         <input class="form-control" id="username" />
                         <br />
-                        <p style="color:red; margin-bottom: 0px" id="missinginfo2"></p>
-                        <label>Enter Room ID (Default 1)</label>
-                        <button type="button" onClick="randomroom()" class="btn btn-primary random">Random</button>
+                        <p style="color:whitesmoke; margin-bottom: 0px" id="missinginfo2"></p>
+                        <label style="color:whitesmoke;">Enter Room ID (Default 1)</label>
+                        <button type="button" onClick="randomroom()" class="btn  random">Random</button>
                         <br/>
                         <input class="form-control" id="roomnum" />
                         <br/>
 
-                        <input style="margin-top: 10px;" type="submit" class="btn btn-primary" value="Enter" />
+                        <input style="margin-top: 10px;" type="submit" class="btn  random" value="Enter" />
                         <hr style="height:65pt; visibility:hidden;" />
                     </div>
                 </form>
             </div>
+        </div><!---->
+
+        <div id="homeImg" class="col-md-3 "> </div>
+    
         </div>
 
         <div id="roomArea">
@@ -137,7 +146,7 @@
 
                     <!-- INVITE MOVED TO MODAL -->
                     <!-- <p id="invite">Invite a friend! Send them the link: vynchronize.herokuapp.com/ROOMNUM</p> -->
-                    <h2><span id="hostlabel" class="label label-default"><i class="fas fa-user"></i> Current Host: Kyle </span></h2>
+                    <h2><span id="hostlabel" class=" form-text label label-default"><i class="fas fa-user" style ="color: rgb(127, 243, 255);"></i> Current Host: Kyle </span></h2>
 
                     <!----------------------------------- PLAYER AREA ----------------------------------->
 
@@ -164,20 +173,20 @@
                     <!----------------------------------- PLAYER AREA ----------------------------------->
                     <!-- <hr> -->
                     <div>
-                        <button id="playButton" onclick="playVideo(roomnum)" style="margin-top:.5rem" class="btn btn-primary"><i class="fa fa-play"></i> Play / <i class="fa fa-pause"></i> Pause</button>
+                        <button id="playButton" onclick="playVideo(roomnum)" style="margin-top:.5rem" class="btn  random"><i class="fa fa-play"></i> Play / <i class="fa fa-pause"></i> Pause</button>
 
-                        <button id="syncbutton" onclick="syncVideo(roomnum);syncAlert()" style="margin-top:.5rem" class="btn btn-primary"><i class="fa fa-sync"></i> Sync</button>
+                        <button id="syncbutton" onclick="syncVideo(roomnum);syncAlert()" style="margin-top:.5rem" class="btn random"><i class="fa fa-sync"></i> Sync</button>
                         <!-- <br/> -->
                         <!-- Turn off the lights -->
-                        <button id="lightButton" style="margin-top:.5rem" class="btn btn-primary switch"><i style="pointer-events:none;" class="fas fa-lightbulb"></i></button>
+                        <button id="lightButton" style="margin-top:.5rem" class="btn  random switch"><i style="pointer-events:none;" class="fas fa-lightbulb"></i></button>
                     </div>
 
                     <!-- Div for lights off! -->
                     <div id='persoff'></div>
 
                     <div class="topbotmargins">
-                        <input type="Video" style="max-width: 200px; margin-right: .5rem; margin-bottom: .5rem; float: left;" class="form-control" id="inputVideoId" placeholder="Video ID / URL">
-                        <button id="changeButton" onclick="changeVideoParse(roomnum)" class="btn btn-primary"><i class="fas fa-exchange-alt"></i> Change Video</button>                        
+                        <input type="Video" style="max-width: 300px; margin-right: .5rem; margin-bottom: .5rem; float: left;" class="random2 form-control" id="inputVideoId" placeholder="Video ID / URL">
+                        <button id="changeButton" onclick="changeVideoParse(roomnum)" class="btn  random"><i class="fas fa-exchange-alt"></i> Change Video</button>                        
                     </div>
                     <div>
                         <!-- <a class="ghost-button-full-color"><i class="far fa-times-circle"></i></a> -->
@@ -202,20 +211,27 @@
                 <div class="col-lg-5">
                     <!-- <div class="col-md-4"> -->
                     <!-- <div id="onlineArea" class="row"> -->
-                    <h5 class="right-header">Online Users</h5>
+                    <h5 class="form-text right-header">Online Users</h5>
                     <hr style="height:0pt; visibility:hidden;" />
 
                     <!-- <br/> -->
-                    <div class="col-md-13">
-                        <div class="well online-users noscrollbar">
-                            <ul class="list-group" id="users"></ul>
+                    <div class="row" style="margin-top:35px;">
+                        <div class="col-md-5">
+                            <!-- Trigger the modal with a button -->
+                            <button style="color:black" type="button" class="random nonmobile-hide btn btn-info btn-sm invite-button" data-toggle="modal" data-target="#inviteModal"><i style=" color:black; width: 30px; height: 30px;" class="fas fa-user-plus"></i><br><h5>Invite</h5></button>
+                         </div>
+
+                        <div class="col-md-7">
+                            <div class="well online-users noscrollbar">
+                                    <ul class="list-group" id="users"></ul>
+                            </div>
                         </div>
 
-                        <!-- Trigger the modal with a button -->
-                        <button style="background-color: #007bff" type="button" class="nonmobile-hide btn btn-info btn-sm invite-button" data-toggle="modal" data-target="#inviteModal"><i style="width: 30px; height: 30px;" class="fas fa-user-plus"></i><br><h5>Invite</h5></button>
+                            
+                        
                     </div>
                     <hr style="height:0pt; visibility:hidden;" />
-                    <h5 style="color:gray;">Chatroom</h5>
+                    <h5 class="form-text ">Chatroom</h5>
 
                     <!-- Modal -->
                     <div id="inviteModal" class="modal fade" role="dialog">
@@ -333,6 +349,7 @@
             var $chat = $('#chat');
             var $roomArea = $('#roomArea');
             var $userFormArea = $('#userFormArea');
+            var $homeImg=$('#homeImg');
             var $userForm = $('#userForm');
             var $users = $('#users');
             var $username = $('#username');
@@ -430,6 +447,7 @@
                     socket.emit('new user', $username.val(), function(data) {
                         if (data) {
                             $userFormArea.hide();
+                            $homeImg.hide();
                             $roomArea.show();
 
                             // Move footer to correct position

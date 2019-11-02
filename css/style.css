@@ -7,6 +7,32 @@
      margin-bottom: 5em;
  }
 
+ .picture {
+  background-image: url(../img/bgtech.jpg);
+ }
+ .box-card{
+    background-color: #ffffff42;
+    margin-top: 6%;
+    padding-top: 2%;
+    border-radius: 10px;
+}
+.welcome{
+    background: -webkit-linear-gradient(#efdddd, #9ddde3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+
+}
+.form-text{
+    background: -webkit-linear-gradient(#efdddd, #9ddde3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.mybtn{
+    background: -webkit-linear-gradient(#efdddd, #9ddde3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
  #initArea {
      display: none;
  }
@@ -81,12 +107,20 @@
      text-align: center;
  }
 
- .random {
-     margin: 10px;
-     height: 30px;
-     width: 120px;
-     padding: 2px;
-     background-color: black;
+ .random2 {
+    margin: 10px;
+    height: 40px;
+   /* width: 120px;
+    padding: 2px;*/
+   
+    
+ }
+ .random{
+    margin: 10px;
+    height: 40px;
+    width: 135px;
+    padding: 2px;
+    background-image: linear-gradient(to bottom, rgba(144, 199, 237, 0.25), rgb(127, 243, 255));
  }
 
  .right-header {
@@ -159,7 +193,7 @@
      min-height: 20px;
      padding: 19px;
      margin-bottom: 20px;
-     background-color: #f5f5f5;
+     background-color: #ffffff42;
      border: 1px solid #e3e3e3;
      border-radius: 4px;
      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
@@ -185,7 +219,9 @@
      width: 500px;
      height: 300px;
      overflow: scroll;
-     border: 1px solid gray;
+     border-radius: 2px;
+     border: 1px solid #e3e3e3;
+     background-color: #ffffff42;
  }
 
  .message-well {
@@ -198,10 +234,10 @@
 
  .online-users {
      padding: 5px !important;
-     float: right;
+     /*float: right;
      /* padding-right: 11em; */
      height: 140px;
-     width: 270px;
+     width: 300px;
      overflow: scroll;
  }
 
